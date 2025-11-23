@@ -1,0 +1,224 @@
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --primary-color: #2563eb; /* Bright Blue */
+    --secondary-color: #1e293b; /* Dark Slate */
+    --accent-color: #f59e0b; /* Amber */
+    --text-color: #333;
+    --bg-color: #f3f4f6;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), 
+                url('https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 60px; /* Offset for fixed header */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- PRODUCTS GRID --- */
+.section-title {
+    text-align: center;
+    margin: 3rem 0 2rem;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-category {
+    font-size: 0.85rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+.product-price {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn-outline {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    background-color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    nav { flex-direction: column; gap: 1rem; }
+}

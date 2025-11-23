@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheasing Shop | Computer Store</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Cheasing Shop</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon" onclick="alert('Cart feature coming soon!')">
+                🛒 <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Upgrade Your Setup</h1>
+            <p>High-performance hardware for professionals and gamers.</p>
+            <br>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <h2 class="section-title" id="products">Featured Products</h2>
+    <div class="container">
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gaming PC" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">Computers</span>
+                    <h3 class="product-title">Alienware Desktop</h3>
+                    <div class="product-price">$1,299.00</div>
+                    <button class="btn-outline" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.keychron.com/cdn/shop/files/K4-Max-2.jpg?v=1736317834&width=460" alt="Mechanical Keyboard" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">Accessories</span>
+                    <h3 class="product-title">RGB Mechanical Keyboard</h3>
+                    <div class="product-price">$89.99</div>
+                    <button class="btn-outline" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://media.us.lg.com/transform/ecomm-PDPGalleryThumbnail-350x350/278c4128-fc58-4652-9cef-aa786005cff6/Monitors_34SR65QC-B_gallery_01_5000x5000" alt="Gaming Monitor" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">Monitors</span>
+                    <h3 class="product-title">UltraWide 4K Monitor</h3>
+                    <div class="product-price">$450.00</div>
+                    <button class="btn-outline" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://resource.logitech.com/w_544,h_466,ar_7:6,c_pad,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-4/gallery/mx-master-4-graphite-top-angle-gallery-1.png" alt="Wireless Mouse" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">Accessories</span>
+                    <h3 class="product-title">Pro Wireless Mouse</h3>
+                    <div class="product-price">$59.99</div>
+                    <button class="btn-outline" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section id="about" class="about-section">
+        <h2 class="section-title" style="margin-top: 0;">About Cheasing</h2>
+        <p>
+            Established in 2025, Cheasing is dedicated to providing the absolute best in computer hardware. 
+            Whether you are building a workstation for video editing or a battle station for gaming, 
+            we have the parts you need at prices you love.
+        </p>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Cheasing</h3>
+            <p>123 Kdrama,Takhmao, Kandal</p>
+            <p>&copy; 2024 TechNova Computer Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
